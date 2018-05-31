@@ -280,7 +280,7 @@
 
                                     <TextView
                                         android:id="@+id/subtract_tv"
-                                        android:layout_width="@dimen/dimen20"
+                                        android:layout_width="@dimen/dimen25"
                                         android:layout_height="match_parent"
                                         android:background="?attr/selectableItemBackgroundBorderless"
                                         android:clickable="true"
@@ -311,7 +311,7 @@
 
                                     <TextView
                                         android:id="@+id/add_tv"
-                                        android:layout_width="@dimen/dimen20"
+                                        android:layout_width="@dimen/dimen25"
                                         android:layout_height="match_parent"
                                         android:background="?attr/selectableItemBackgroundBorderless"
                                         android:clickable="true"
