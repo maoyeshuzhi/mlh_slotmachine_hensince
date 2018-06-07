@@ -135,14 +135,15 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen40"
+        android:layout_marginLeft="@dimen/dimen44"
         android:layout_marginTop="@dimen/dimen16"
         android:layout_weight="1">
 
         <ImageView
             android:id="@+id/code_img"
-            android:layout_width="@dimen/dimen116"
-            android:layout_height="@dimen/dimen116"
+            android:layout_width="@dimen/dimen100"
+            android:layout_height="@dimen/dimen100"
+            android:layout_marginRight="@dimen/dimen12"
             android:scaleType="fitXY"
             android:src="@mipmap/default_image" />
 

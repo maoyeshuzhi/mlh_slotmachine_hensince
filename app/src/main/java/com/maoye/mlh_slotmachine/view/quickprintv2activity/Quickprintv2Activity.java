@@ -166,7 +166,6 @@ public class Quickprintv2Activity extends MVPBaseActivity<Quickprintv2Contract.V
             }
         });
 
-
         banner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {

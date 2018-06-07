@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.maoye.mlh_slotmachine.R;
@@ -24,9 +25,11 @@ import com.maoye.mlh_slotmachine.bean.SapIdBean;
 import com.maoye.mlh_slotmachine.bean.VersionInfoBean;
 import com.maoye.mlh_slotmachine.mvp.MVPBaseActivity;
 import com.maoye.mlh_slotmachine.util.Constant;
+import com.maoye.mlh_slotmachine.util.DensityUtil;
 import com.maoye.mlh_slotmachine.util.DeviceInfoUtil;
 import com.maoye.mlh_slotmachine.util.LogUtils;
 import com.maoye.mlh_slotmachine.util.MD5;
+import com.maoye.mlh_slotmachine.util.ScreenMatchDp;
 import com.maoye.mlh_slotmachine.util.VersionManagerUtil;
 import com.maoye.mlh_slotmachine.util.httputil.BaseRetrofit;
 import com.maoye.mlh_slotmachine.util.httputil.cache.CacheUtil;
@@ -70,6 +73,9 @@ import io.reactivex.schedulers.Schedulers;
 
 public class HomeActivity extends MVPBaseActivity<HomeContract.View, HomePresenter> implements HomeContract.View {
 
+    @BindView(R.id.test)
+    TextView test;
+
     @BindView(R.id.print_bill_bt)
     Button printBillBt;
     @BindView(R.id.brand_guides_bt)
@@ -99,6 +105,8 @@ public class HomeActivity extends MVPBaseActivity<HomeContract.View, HomePresent
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         LogUtils.e("当前设备设备号：" + DeviceInfoUtil.getDeviceId());
+
+
         goodsNumView = new BadgeView(HomeActivity.this);
         goodsNumView.setStyle(1);
         goodsNumView.setTargetView(cartImg);
@@ -145,9 +153,10 @@ public class HomeActivity extends MVPBaseActivity<HomeContract.View, HomePresent
         int height = metric.heightPixels;   // 屏幕高度（像素）
         float density = metric.density;      // 屏幕密度（0.75 / 1.0 / 1.5）
         int densityDpi = metric.densityDpi;  // 屏幕密度DPI（120 / 160 / 240）
+        ScreenMatchDp.screen(0);
 
         Log.e("tag", "width: "+width +"height "+height +"density: " +density+"densityDpi:" +densityDpi);
-
+        test.setText("width: "+width +"height "+height +"density: " +density+"densityDpi:" +densityDpi);
 
         if (BaseInfo.getSapId() == null) baseInfo();
         Object query = CacheUtil.query(CacheUtil.HOME_ACTIVITY, HomeBean.class);

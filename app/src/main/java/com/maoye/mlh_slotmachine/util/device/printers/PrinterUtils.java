@@ -391,7 +391,7 @@ public class PrinterUtils {
                 iRet = 0;
                 break;
             case 8:
-                questStatus(0);
+                questStatus(1);
                 sMsg.append(Constant.PaperWillExhausted_CN); // 纸将尽
                 iRet = 0;
                 break;

@@ -26,7 +26,6 @@ public abstract class EnvConfig {
     public  abstract String getH5BaseUrl();
 
     public abstract int getEnvType();
-
     public enum Stage {
         DEV, PROD ,LUOCHAO
     }

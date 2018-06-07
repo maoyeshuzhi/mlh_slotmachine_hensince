@@ -144,7 +144,7 @@
             android:id="@+id/payhint_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen92"
+            android:layout_marginLeft="@dimen/dimen86"
             android:layout_marginTop="@dimen/dimen12"
             android:gravity="center"
             android:text="@string/alipayhint_str"
